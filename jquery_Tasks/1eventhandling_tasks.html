@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page</title>
+    <style>
+        /* Custom CSS for uniqueness */
+        p {
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            transition: background-color 0.3s ease;
+        }
+        p:hover {
+            background-color: #f0f0f0;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 5px 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            color: #ffdd57;
+        }
+    </style>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <p id="item1">Mouse Over Me</p>
+    <p id="item2">Single Click Me</p>
+    <p id="item3">Double Click Me</p>
+    <p id="item4">Hover to Hide</p>
+    <p>Press [Enter] to Show/Hide Menu</p>
+
+    <nav style="display: none;">
+        <ul>
+            <li><a href="#" id="link-home">Dashboard</a></li>
+            <li><a href="#" id="link-projects">Projects</a></li>
+            <li><a href="#" id="link-contact">Support</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        $(document).ready(function() {
+            // Change ID names and add unique actions
+            $("#item1").hover(function() {
+                $(this).css("background-color", "#e0ffe0").fadeOut(700);
+            });
+            $("#item2").click(function() {
+                $(this).fadeOut(500);
+            });
+            $("#item3").dblclick(function() {
+                $(this).slideUp(600);
+            });
+            $("#item4").mouseup(function() {
+                $(this).css("background-color", "#ffe0e0").slideUp(400);
+            });
+
+            // Renamed variable and toggled fade effect
+            var menuVisible = false;
+            $(document).keypress(function(e) {
+                if (e.which === 13) { // Check for Enter key
+                    if (!menuVisible) {
+                        $("nav").fadeIn(700);
+                        menuVisible = true;
+                    } else {
+                        $("nav").fadeOut(300);
+                        menuVisible = false;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

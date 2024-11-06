@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        /* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Hamburger icon */
+#menu-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+#menu-icon .bar {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #74cdf3;
+    color: rgb(6, 6, 6);
+    padding-top: 20px;
+    transition: 0.5s;
+    z-index: 1;
+}
+#sidebar.active {
+    left: 0; /* Slide-in effect */
+}
+
+#close-btn {
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.logo {
+    display: block;
+    margin: 20px auto;
+    width: 50px;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.nav-links li {
+    margin: 20px 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 20px;
+}
+
+img{
+    border-radius: 70rem;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Hamburger Icon -->
+    <div id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <span id="close-btn">&times;</span>
+        <img src="bull.jpg" alt="Logo" class="logo">
+        <ul class="nav-links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">PROJECTS</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="#"><img src="insta.png" alt="Facebook">Facebook</a>
+            <a href="#"><img src="insta.png" alt="Twitter">Facebook</a>
+            <a href="#"><img src="insta.png" alt="Behance">Facebook</a>
+            <a href="#"><img src="insta.png" alt="Dribbble">Facebook</a>
+            <a href="#"><img src="insta.png" alt="LinkedIn">Facebook</a>
+        </div>
+    </div>
+
+    <script >
+        $(document).ready(function() {
+    // Open sidebar
+    $('#menu-icon').click(function() {
+        $('#sidebar').addClass('active');
+    });
+
+    // Close sidebar
+    $('#close-btn').click(function() {
+        $('#sidebar').removeClass('active');
+    });
+});
+
+    </script>
+</body>
+</html>

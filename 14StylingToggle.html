@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .display{
+            background-color: antiquewhite;
+            color:blue
+        }
+    </style>
+</head>
+<body>
+    <h1 class="display">This is heading tag</h1>
+    <button id="one">Show</button>
+    <button id="two">Hide</button>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+                // $("#one").click(function(){
+                //     $(".display").show()
+                // })
+                // $("#two").click(function(){
+                //     $(".display").hide()
+                // })
+                $("#one").click(function(){
+                    $("h1").addClass("display")
+                })
+                $("#two").click(function(){
+                    $("h1").removeClass("display")
+                })
+        })
+    </script>
+</body>
+</html>

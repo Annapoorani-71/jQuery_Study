@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waypoints and Animate.css Example</title>
+    
+    <!-- jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!-- Waypoints plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    
+    <!-- Animate.css library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .section {
+            padding: 100px 20px;
+            text-align: center;
+            font-size: 1.5em;
+            opacity: 0; /* Start hidden */
+        }
+        .section:nth-child(odd) {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align:center;">Scroll Down to See Animations</h1>
+
+    <div class="section" id="section1">Section 1 - Welcome!</div>
+    <div class="section" id="section2">Section 2 - About Us</div>
+    <div class="section" id="section3">Section 3 - Our Services</div>
+    <div class="section" id="section4">Section 4 - Contact Us</div>
+
+    <script>
+        $(document).ready(function() {
+            // Add waypoint to each section
+            $('.section').waypoint(function() {
+                // Add animation class when this section is scrolled into view
+                $(this.element).addClass('animate__animated animate__fadeInUp');
+                $(this.element).css("opacity", "1"); // Make the section visible
+            }, {
+                offset: '75%' // Trigger animation when the element is 75% from the top of the viewport
+            });
+        });
+    </script>
+
+</body>
+</html>

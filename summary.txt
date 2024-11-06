@@ -1,0 +1,883 @@
+TASKS
+-----
+JSVSJQUERY
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="content">Hello</div>
+    <script>
+        // document.getElementById("content").onclick=function(){
+        //    this.style.display="none"
+        // }
+     
+            $("#content").click(function(){
+                $(this).hide();
+            })
+       
+    </script>
+</body>
+</html>
+
+ELEMENT
+-------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>This is paragraph </p>
+    <h6>This is paragraph </h6>
+    <p>This is paragraph </p>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h6').html("content change");
+            $('p').html("<h1>this is h1 tag</h1>");
+        //  $(selecting element).html("content/ content with tag")
+        })
+    </script>
+    
+</body>
+</html>
+
+
+CLICK
+-----
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is h1 </h1>
+    <h1>This is paragraph </h1>
+    <h2>This is paragraph </h2>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+           $("document").ready(function()
+           {
+              $("h1").click(function(){
+               console.log("h1 element selector");
+               
+                
+              })
+           }
+        )
+    </script>
+</body>
+</html>
+
+
+THIS
+----
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is h1 </h1>
+    <h1>This is paragraph </h1>
+    <h2>This is paragraph </h2>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+           $("document").ready(function()
+           {
+              $("h1").click(function(){
+                var a=$(this).html();
+                console.log(a);
+                
+              })
+           }
+        )
+    </script>
+</body>
+</html>
+
+
+
+
+ID,CLASS,ELEMENT
+----------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="a">This is heading 1</h1>
+    <h1 class="b">This is heading 2</h1>
+    <h1 class="b">This is heading 3</h1>
+    <h1>This is heading 4</h1>
+    <h1>This is heading 5</h1>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            // $("#a").click(function(){
+            //     alert("id selector is invoked")
+            // })
+            // $(".b").click(function(){
+            //     alert("class selector is invoked")
+            // })
+            // $("h1").click(function(){
+            //     alert("Element selector is invoked")
+            // })
+
+            // $("#a,.b,h1").click(function(){
+            //     alert("id, class, and element selector is invoked")
+            // })
+            
+            // $("#a,.b,h1").click(function(){
+            //     alert("id, class, and element selector is invoked")
+            // })
+
+          
+
+
+
+        })
+    </script>
+</body>
+</html>
+
+HTML-CSS-text
+--------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="a">This is heading tags</h1>
+    <h1>This is heading tags</h1>
+    <h1 class="a">This is heading tags</h1>
+    <h1 class="a">This is heading tags</h1>
+
+    <p></p>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            // $(".a").html("the changed texts")
+            // $("h1").css("color",'red')
+              // $("#a,.b").html("The changed texts");
+
+            // $("h1").css("color",'red')
+
+            $("h1").css({
+                "background-color":"aliceblue",
+                "color":"green"
+            })
+
+            jQuery("p").text("this is paragraph tag")
+
+
+        })
+    </script>
+</body>
+</html>
+
+
+FIRSTANDLAST
+------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="a">This is heading tags</h1>
+    <h1>This is heading tags</h1>
+    <h1 class="a">This is heading tags</h1>
+    <h1 class="a">This is heading tags</h1>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            $(".a:first").css('background-color','blue');
+        })
+    </script>
+    
+</body>
+</html>
+
+
+ODD/EVENTHANDLING
+----------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Thi is heading Texts 1</h1>
+    <h1>Thi is heading Texts 2</h1>
+    <h1>Thi is heading Texts 3</h1>
+    <h1>Thi is heading Texts 4</h1>
+    <h1>Thi is heading Texts 5</h1>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            $("h1:odd").css("background-color","blue")
+            $("h1:even").css("background-color","green")
+        })
+    </script>
+</body>
+</html>
+
+
+CLASSWITHELEMENT
+----------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <i class="a">This is paragraph tags</i>
+    <p class="a">This is paragraph tags</p>
+    <p class="a">This is paragraph tags</p>
+    <p class="a">This is paragraph tags</p>
+    <!-- <script src="./js/jquery-3.7.1.min.js"></script> -->
+     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p.a").css("background-color","pink")
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+CONTAINER
+---------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>This is paragraph tags haha</p>
+    <p>This is paragraph tags</p>
+    <p>This is paragraph tags haha</p>
+    <p>This is paragraph tags</p>
+    <p>This is paragraph tags</p>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            $("p:contains(haha)").css("color","purple")
+            $("p:contains(haha)").css("font-weight","bold")
+        })
+    </script>
+</body>
+</html>
+
+
+IMAGE RENDERING
+--------------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./assets/image1.png" alt="">
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            $("img").click(function(){
+                var a=$(this).attr('src');
+                $(this).attr('src','./assets/image2.png')
+            })
+        })
+    </script>
+</body>
+</html>
+
+IG TOGGLING
+------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./assets/image1.png" alt="">
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            $("img").click(function(){
+                var a=$(this).attr('src');
+                $(this).attr('src','./assets/image2.png')
+            })
+        })
+    </script>
+</body>
+</html>
+
+
+CHILDRENSELECTOR
+----------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>SUKKUU</li>
+        <li>SUKKUU</li>
+        <li>SUKKUU</li>
+        <ul>
+            <li>PUGAZH</li>
+            <li>PUGAZH</li>
+            <li>PUGAZH</li>
+            <li>PUGAZH</li>
+            <li>PUGAZH</li>
+        </ul>
+    </ul>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            //color both
+            $("ul").children('li').css("color",'red')
+               // Color only the 'SUKKUU' items
+               $("ul").first().children("li").css("color", "red");
+            
+            // Color only the 'PUGAZH' items
+            $("ul").eq(1).children("li").css("color", "blue");
+        })
+    </script>
+    
+</body>
+</html
+
+
+STYLETOGGLE
+----------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>SUKKUU</li>
+        <li>SUKKUU</li>
+        <li>SUKKUU</li>
+        <ul>
+            <li>PUGAZH</li>
+            <li>PUGAZH</li>
+            <li>PUGAZH</li>
+            <li>PUGAZH</li>
+            <li>PUGAZH</li>
+        </ul>
+    </ul>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            //color both
+            $("ul").children('li').css("color",'red')
+               // Color only the 'SUKKUU' items
+               $("ul").first().children("li").css("color", "red");
+            
+            // Color only the 'PUGAZH' items
+            $("ul").eq(1).children("li").css("color", "blue");
+        })
+    </script>
+    
+</body>
+</html
+
+
+CSS HEIGHT-width
+----------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>This is div element</div>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            $("div").height("200px").width("200px").css({
+                "background-color":"green",
+                "color":"blue"
+            })
+        })
+    </script>
+</body>
+</html>
+
+
+INNERHEIGHT-width
+------------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Helllllllllllllllllooooooooooooooooo</div>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+          $("document").ready(function(){
+            console.log(`InnerHeight:${'div'}`.innerHeight());
+            console.log(`InnerWidth: ${'div'}`.innerWidth);
+            
+        })
+    </script>
+</body>
+</html>
+
+SETTING MUTLTIPLE attr
+----------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h4 title="Title" data="data">Computer Science Engineering</h4>
+    <button class="btnTitle">Get Title</button>
+    <button class="btnData">Get Data</button>
+    <button class="btnSet">Set Attr</button>
+    <button id="btnRemove">Remove Attr</button>
+    
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".btnTitle").click(function(){
+                console.log($("h4").attr("title"));
+            });
+            $(".btnData").click(function(){
+                console.log($("h4").attr("data"));    
+            });
+            $(".btnSet").click(function(){
+               $("h4").attr({
+                "title": "This is Title",
+                "data": "This is data"
+               }); 
+               console.log("Value set success");
+            });
+            $("#btnRemove").click(function(){
+                $("h4").removeAttr("title");
+            })
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EVENTHANDLING
+-------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page</title>
+    <style>
+        /* Custom CSS for uniqueness */
+        p {
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            transition: background-color 0.3s ease;
+        }
+        p:hover {
+            background-color: #f0f0f0;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 5px 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            color: #ffdd57;
+        }
+    </style>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <p id="item1">Mouse Over Me</p>
+    <p id="item2">Single Click Me</p>
+    <p id="item3">Double Click Me</p>
+    <p id="item4">Hover to Hide</p>
+    <p>Press [Enter] to Show/Hide Menu</p>
+
+    <nav style="display: none;">
+        <ul>
+            <li><a href="#" id="link-home">Dashboard</a></li>
+            <li><a href="#" id="link-projects">Projects</a></li>
+            <li><a href="#" id="link-contact">Support</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        $(document).ready(function() {
+            // Change ID names and add unique actions
+            $("#item1").hover(function() {
+                $(this).css("background-color", "#e0ffe0").fadeOut(700);
+            });
+            $("#item2").click(function() {
+                $(this).fadeOut(500);
+            });
+            $("#item3").dblclick(function() {
+                $(this).slideUp(600);
+            });
+            $("#item4").mouseenter(function() {
+                $(this).css("background-color", "#ffe0e0").slideUp(400);
+            });
+
+            // Renamed variable and toggled fade effect
+            var menuVisible = false;
+            $(document).keypress(function(e) {
+                if (e.which === 13) { // Check for Enter key
+                    if (!menuVisible) {
+                        $("nav").fadeIn(700);
+                        menuVisible = true;
+                    } else {
+                        $("nav").fadeOut(300);
+                        menuVisible = false;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+BURGERMENU TOGGLING
+--------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        /* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Hamburger icon */
+#menu-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+#menu-icon .bar {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #74cdf3;
+    color: rgb(6, 6, 6);
+    padding-top: 20px;
+    transition: 0.5s;
+    z-index: 1;
+}
+#sidebar.active {
+    left: 0; /* Slide-in effect */
+}
+
+#close-btn {
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.logo {
+    display: block;
+    margin: 20px auto;
+    width: 50px;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.nav-links li {
+    margin: 20px 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 20px;
+}
+
+img{
+    border-radius: 70rem;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Hamburger Icon -->
+    <div id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <span id="close-btn">&times;</span>
+        <img src="bull.jpg" alt="Logo" class="logo">
+        <ul class="nav-links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">PROJECTS</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="#"><img src="insta.png" alt="Facebook">Facebook</a>
+            <a href="#"><img src="insta.png" alt="Twitter">Facebook</a>
+            <a href="#"><img src="insta.png" alt="Behance">Facebook</a>
+            <a href="#"><img src="insta.png" alt="Dribbble">Facebook</a>
+            <a href="#"><img src="insta.png" alt="LinkedIn">Facebook</a>
+        </div>
+    </div>
+
+    <script >
+        $(document).ready(function() {
+    // Open sidebar
+    $('#menu-icon').click(function() {
+        $('#sidebar').addClass('active');
+    });
+
+    // Close sidebar
+    $('#close-btn').click(function() {
+        $('#sidebar').removeClass('active');
+    });
+});
+
+    </script>
+</body>
+</html>
+
+
+
+ANIMATESLIDE
+------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Initial box styling */
+        #content-box {
+            width: 150px;
+            height: 100px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            text-align: center;
+            padding-top: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            background-color: aqua;
+        }
+
+        /* Initial hidden content */
+        #content-after {
+            display: none;
+            opacity: 0;
+            padding: 10px;
+            text-align: justify;
+           justify-content: center;
+
+          
+        }
+
+    </style>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="content-box">
+        <p id="content-before">Click to see more!</p>
+        <p id="content-after">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut explicabo odit, sequi quaerat nihil esse quia commodi maxime alias tenetur, animi pariatur dolores dignissimos amet. Fuga provident esse in quam.
+
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut explicabo odit, sequi quaerat nihil esse quia commodi maxime alias tenetur, animi pariatur dolores dignissimos amet. Fuga provident esse in quam.
+
+
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut explicabo odit, sequi quaerat nihil esse quia commodi maxime alias tenetur, animi pariatur dolores dignissimos amet. Fuga provident esse in quam.
+
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut explicabo odit, sequi quaerat nihil esse quia commodi maxime alias tenetur, animi pariatur dolores dignissimos amet. Fuga provident esse in quam.
+        </p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            // Click event for expanding the box and revealing more content
+            $("#content-box").click(function(){
+                // Expand the box
+                $(this).animate({
+                    width: '500px',
+                    height: '300px'
+                }, 1000, function() {
+                    // Show and animate the hidden content
+                    $("#content-after").show().animate({opacity: '1'}, 1000);
+                });
+
+                // Hide the initial content text
+                $("#content-before").hide();
+            });
+        });
+    </script>
+</body>
+</html>

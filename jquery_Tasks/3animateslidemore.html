@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Initial box styling */
+        #content-box {
+            width: 150px;
+            height: 100px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            text-align: center;
+            padding-top: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            background-color: aqua;
+        }
+
+        /* Initial hidden content */
+        #content-after {
+            display: none;
+            opacity: 0;
+            padding: 10px;
+            text-align: justify;
+           justify-content: center;
+
+          
+        }
+
+    </style>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="content-box">
+        <p id="content-before">Click to see more!</p>
+        <p id="content-after">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut explicabo odit, sequi quaerat nihil esse quia commodi maxime alias tenetur, animi pariatur dolores dignissimos amet. Fuga provident esse in quam.
+
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut explicabo odit, sequi quaerat nihil esse quia commodi maxime alias tenetur, animi pariatur dolores dignissimos amet. Fuga provident esse in quam.
+
+
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut explicabo odit, sequi quaerat nihil esse quia commodi maxime alias tenetur, animi pariatur dolores dignissimos amet. Fuga provident esse in quam.
+
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut explicabo odit, sequi quaerat nihil esse quia commodi maxime alias tenetur, animi pariatur dolores dignissimos amet. Fuga provident esse in quam.
+        </p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            // Click event for expanding the box and revealing more content
+            $("#content-box").click(function(){
+                // Expand the box
+                $(this).animate({
+                    width: '500px',
+                    height: '300px'
+                }, 1000, function() {
+                    // Show and animate the hidden content
+                    $("#content-after").show().animate({opacity: '1'}, 1000);
+                });
+
+                // Hide the initial content text
+                $("#content-before").hide();
+            });
+        });
+    </script>
+</body>
+</html>

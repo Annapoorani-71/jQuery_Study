@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>SUKKUU</li>
+        <li>SUKKUU</li>
+        <li>SUKKUU</li>
+        <ul>
+            <li>PUGAZH</li>
+            <li>PUGAZH</li>
+            <li>PUGAZH</li>
+            <li>PUGAZH</li>
+            <li>PUGAZH</li>
+        </ul>
+    </ul>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            //color both
+            $("ul").children('li').css("color",'red')
+               // Color only the 'SUKKUU' items
+               $("ul").first().children("li").css("color", "red");
+            
+            // Color only the 'PUGAZH' items
+            $("ul").eq(1).children("li").css("color", "blue");
+        })
+    </script>
+    
+</body>
+</html

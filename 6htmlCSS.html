@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="a">This is heading tags</h1>
+    <h1>This is heading tags</h1>
+    <h1 class="a">This is heading tags</h1>
+    <h1 class="a">This is heading tags</h1>
+
+    <p></p>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            // $(".a").html("the changed texts")
+            // $("h1").css("color",'red')
+              // $("#a,.b").html("The changed texts");
+
+            // $("h1").css("color",'red')
+
+            $("h1").css({
+                "background-color":"aliceblue",
+                "color":"green"
+            })
+
+            jQuery("p").text("this is paragraph tag")
+
+
+        })
+    </script>
+</body>
+</html>

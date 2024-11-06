@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h4 title="Title" data="data">Computer Science Engineering</h4>
+    <button class="btnTitle">Get Title</button>
+    <button class="btnData">Get Data</button>
+    <button class="btnSet">Set Attr</button>
+    <button id="btnRemove">Remove Attr</button>
+    
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".btnTitle").click(function(){
+                console.log($("h4").attr("title"));
+            });
+            $(".btnData").click(function(){
+                console.log($("h4").attr("data"));    
+            });
+            $(".btnSet").click(function(){
+               $("h4").attr({
+                "title": "This is Title",
+                "data": "This is data"
+               }); 
+               console.log("Value set success");
+            });
+            $("#btnRemove").click(function(){
+                $("h4").removeAttr("title");
+            })
+        });
+    </script>
+</body>
+</html>
